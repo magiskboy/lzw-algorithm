@@ -10,9 +10,10 @@ SRC = lzw.c compress.c extract.c table.c
 
 TARGET = lzw
 
-lzw: ${SRC}
+build: ${SRC}
 	${CC} ${CFLAGS} ${LFLAGS} ${SRC} -o ${BUILD_DIR}${TARGET}
 
 clean:
 	rm ${BUILD_DIR}*
 
+.PHONY: build clean
